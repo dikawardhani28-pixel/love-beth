@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- GALAXY -->
+    <div id="galaxy">
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+        <div class="nebula nebula-three"></div>
+
+        <div class="stars stars-one"></div>
+        <div class="stars stars-two"></div>
+        <div class="stars stars-three"></div>
+
+        <div id="shootingStars"></div>
+    </div>
+
+    <!-- TRANSITION -->
+    <div id="transitionOverlay"></div>
+
+
+    <!-- =========================
+         STEP 1 — LOCK
+    ========================== -->
+
+    <section id="step1" class="step active">
+
+        <div class="lock-container" onclick="showPassword()">
+
+            <div class="lock">
+
+                <div class="lock-shackle"></div>
+
+                <div class="lock-body">
+                    <div class="keyhole"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 2 — PASSWORD
+    ========================== -->
+
+    <section id="step2" class="step">
+
+        <div class="password-box">
+
+            <p class="password-title">
+                Enter the password
+            </p>
+
+            <p class="password-clue">
+                your gf's birthday
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                maxlength="8"
+                placeholder="••••••••"
+                autocomplete="off"
+            >
+
+            <button onclick="checkPassword()">
+                Unlock
+            </button>
+
+            <p id="wrongPassword"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 2 — LOVE
+    ========================== -->
+
+    <section id="loveScene" class="step">
+
+        <div class="love-content">
+
+            <p class="name">
+                Karebeth Wahyu F
+            </p>
+
+            <div
+                class="big-heart"
+                onclick="goToMessage()"
+            >
+                ♥
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PARTICLES -->
+
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         STEP 3 — MESSAGE
+    ========================== -->
+
+    <section id="step3" class="step">
+
+        <!-- pastel flowers -->
+        <div class="flowers">
+
+            <div class="flower flower-one">✿</div>
+            <div class="flower flower-two">❀</div>
+            <div class="flower flower-three">✿</div>
+            <div class="flower flower-four">❀</div>
+            <div class="flower flower-five">✿</div>
+            <div class="flower flower-six">❀</div>
+
+        </div>
+
+
+        <div class="message-container">
+
+            <h1 id="messageTitle"></h1>
+
+            <p id="messageText"></p>
+
+            <p id="messageThank"></p>
+
+            <div id="finalLove" class="final-love"></div>
+
+            <button
+                class="restart-button"
+                onclick="restart()"
+            >
+                ↩ start again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
